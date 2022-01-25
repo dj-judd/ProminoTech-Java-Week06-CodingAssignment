@@ -22,15 +22,12 @@ public class Player{
 	private int score; // score of player
 	private String name; // name of player
 
-	
 	//constructor that initializes the score
 	public Player(String name){
 		score = 0; // sets initial score to 0
 		setPlayerName(name); //initialize name of the player
-		
 		playerHand = new Card[sizeOfHand];
-		currentCardIndex = 0; // initialize this variable for flipping cards
-		
+		currentCardIndex = 0; // initialize this variable for flipping cards	
 	} // end of Player constructor
 	
 	public String getPlayerName(){
@@ -40,7 +37,6 @@ public class Player{
 	public void setPlayerName(String newName) {
 		this.name = newName;
 	} //end of name setter
-	
 	
 	public void describe() {
 		System.out.println("Name: " + this.name + " Score: " + this.score);
@@ -68,7 +64,4 @@ public class Player{
 	public int getPlayerScore(){
 		return this.score;
 	} //end of PlayerScore getter
-	
-
 } // end of Player class
-

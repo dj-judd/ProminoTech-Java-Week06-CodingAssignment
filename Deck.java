@@ -29,18 +29,15 @@ public class Deck {
 		cards = new Card[sizeOfDeck]; // creating an array of Card objects
 		currentCard = 0; // sets the current card so 1st card dealt is deck[0]
 		randomNumbers = new Random();
-		
 		// populate the deck with card objects
 		for (int count = 0; count < cards.length; count++) {
-			cards[count] = new Card(cardFace[count % 13], cardSuit[count/13],cardValue[count % 13]);
-			
+			cards[count] = new Card(cardFace[count % 13], cardSuit[count/13],cardValue[count % 13]);		
 		} // end of populator for-loop
 	} // end of Deck constructor
 	
 	public void shuffle() {
 		// after shuffling, deal should start at cards[0] again
-		currentCard = 0; // re-initializing currentCard
-		
+		currentCard = 0; // re-initializing currentCard	
 		// for each card, pick another random card and swap them
 		for (int first = 0; first < cards.length; first++) {
 			// select a random number between 0 and 51
@@ -50,7 +47,6 @@ public class Deck {
 			Card temp = cards[first];
 			cards[first] = cards[second];
 			cards[second] = temp;
-			
 		} // end of shuffle for-loop
 	} // end of shuffle
 	
